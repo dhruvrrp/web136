@@ -75,6 +75,51 @@
                 }
             });
         };
+        this.GetStudentGPA = function (id, callback) {
+            $.ajax({
+                async: asyncIndicator,
+                method: "GET",
+                url: "http://localhost:5419/Api/Student/GetStudentGPA?id=" + id,
+                data: "",
+                dataType: "json",
+                success: function (result) {
+                    callback(result);
+                },
+                error: function () {
+                    alert('Error while loading student detail.  Is your service layer running?');
+                }
+            });
+        };
+        this.EnrollSchedule = function (id, callback) {
+            $.ajax({
+                async: asyncIndicator,
+                method: "POST",
+                url: "http://localhost:5419/Api/Student/EnrollSchedule?id=" + id,
+                data: "",
+                dataType: "json",
+                success: function (result) {
+                    callback(result);
+                },
+                error: function () {
+                    alert('Error while loading student detail.  Is your service layer running?');
+                }
+            });
+        };
+        this.DropEnrolledSchedule = function (id, callback) {
+            $.ajax({
+                async: asyncIndicator,
+                method: "GET",
+                url: "http://localhost:5419/Api/Student/DropEnrolledSchedule?id=" + id,
+                data: "",
+                dataType: "json",
+                success: function (result) {
+                    callback(result);
+                },
+                error: function () {
+                    alert('Error while loading student detail.  Is your service layer running?');
+                }
+            });
+        };
     }
 
     return StudentModel;

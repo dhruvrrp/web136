@@ -14,13 +14,38 @@
             return this.View();
         }
 
-        public ActionResult CreateStudent()
+        public ActionResult GradeStudent(string id)
+        {
+            ViewBag.id = id;
+            return this.View();
+        }
+
+        public ActionResult GetEnrollments(string id)
+        {
+            ViewBag.id = id;
+            return this.View();
+        }
+
+        public ActionResult GetEnrollmentsByClass(string id)
+        {
+            ViewBag.id = id;
+            return this.View();
+        }
+
+        public ActionResult GetEnrollmentsByProfessor(string id)
+        {
+            ViewBag.id = id;
+            return this.View();
+        }
+
+        public ActionResult GetTAInfo()
         {
             return this.View();
         }
 
-        public ActionResult EditStudent(string id)
+        public ActionResult EditStaff(string id)
         {
+            ViewBag.id = id;
             return this.View();
         }
     }
