@@ -286,6 +286,10 @@
     <Content Include="Views\Student\Edit.cshtml" />
     <Content Include="Views\Shared\SharedEditStudent.cshtml" />
     <Content Include="Views\JasmineTest\Index.cshtml" />
+    <Content Include="Views\Student\ViewEnrollments.cshtml" />
+    <Content Include="Views\Student\AddEnrollment.cshtml" />
+    <Content Include="Views\Shared\SharedViewStudentGPA.cshtml" />
+    <Content Include="Views\Student\ViewGPA.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

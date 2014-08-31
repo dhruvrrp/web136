@@ -5,3 +5,48 @@
 
 @id
 136 TODO : edit the student record
+
+
+<!--<a href="/Staff/StudentList"><< back</a>-->
+<div id="divStudent">
+    <table>
+        <tr>
+            <td>Id</td>
+            <td><input data-bind="value: id" /> (at least 5 chars)</td>
+        </tr>
+        <tr>
+            <td>SSN</td>
+            <td><input data-bind="value: ssn" /></td>
+        </tr>
+        <tr>
+            <td>First</td>
+            <td><input data-bind="value: first" /></td>
+        </tr>
+        <tr>
+            <td>Last</td>
+            <td><input data-bind="value: last" /></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input data-bind="value: email" /></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="password" data-bind="value: password" /></td>
+        </tr>
+        <tr>
+            <td>Shoe Size</td>
+            <td><input data-bind="value: shoesize" /></td>
+        </tr>
+        <tr>
+            <td>Weight</td>
+            <td><input data-bind="value: weight" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button data-bind="click: add">Edit</button></td>
+        </tr>
+    </table>
+</div>
+
+

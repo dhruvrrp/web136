@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "AddEnrollment";
+}
+
+<h2>AddEnrollment</h2>
+<a href="/Student/ViewEnrollments"><< back</a>
+<div id="divAddEnrollment">
+    <select>
+        <option value="11">CSE 11</option>
+        <option value="15">CSE 15L</option>
+        <option value="30">CSE 30</option>
+        <option value="100">CSE 100</option>
+    </select>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        require(['ViewModels/StudentViewModel'], function (studentViewModel) {
+            var studentViewModelObj = new studentViewModel();
+            studentViewModelObj.Initialize();
+        });
+    });
+</script>
