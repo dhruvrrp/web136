@@ -14,13 +14,15 @@
             return this.View();
         }
 
-        public ActionResult EditStudent(string id)
+        public ActionResult GradeStudent(string id)
         {
+            ViewBag.id = id;
             return this.View();
         }
 
-        public ActionResult GetClassEnrollment(string schedule_id)
+        public ActionResult GetClassEnrollment(string id)
         {
+            ViewBag.id = id;
             return this.View();
         }
 
