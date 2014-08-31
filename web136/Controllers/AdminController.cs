@@ -22,6 +22,12 @@
             return this.View();
         }
 
+        public ActionResult InstructorList(int id)
+        {
+            ViewBag.id = id;
+            return this.View();
+        }
+
         public ActionResult ClassList(int id)
         {
             ViewBag.id = id;
@@ -50,6 +56,11 @@
             return this.View();
         }
         public ActionResult EditStudent(int id)
+        {
+            ViewBag.id = id;
+            return this.View();
+        }
+        public ActionResult EditInstructor(int id)
         {
             ViewBag.id = id;
             return this.View();

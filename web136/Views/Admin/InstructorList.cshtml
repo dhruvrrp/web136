@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "InstructorList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var id = ViewBag.id;
+}
+
+<h3>View All Instructors</h3>
+
+<div id="divInstructorList">
+    <a href="~/Admin/Index?id=@ViewBag.id">Back</a>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th></th>
+                <th>Id</th>
+                <th>First</th>
+                <th>Last</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: viewModel">
+            <tr>
+                <td><a href="~/Admin/EditInstructor?id=@ViewBag.id">Edit</a></td>
+                <td><a href="~/Admin/Index?id=@ViewBag.id">Delete</a></td>
+                <td>1</td>
+                <td>Isaac</td>
+                <td>Chu</td>
+                <td>ichu@ucsd.edu</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
