@@ -14,14 +14,21 @@
             return this.View();
         }
 
-        public ActionResult CreateStudent()
-        {
-            return this.View();
-        }
-
         public ActionResult EditStudent(string id)
         {
             return this.View();
         }
+
+        public ActionResult GetClassEnrollment(string schedule_id)
+        {
+            return this.View();
+        }
+
+        public ActionResult GetTAInfo()
+        {
+            return this.View();
+        }
+
+
     }
 }

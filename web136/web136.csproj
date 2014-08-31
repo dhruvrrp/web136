@@ -286,6 +286,7 @@
     <Content Include="Views\Student\Edit.cshtml" />
     <Content Include="Views\Shared\SharedEditStudent.cshtml" />
     <Content Include="Views\JasmineTest\Index.cshtml" />
+    <Content Include="Views\Staff\GetEnrollmentList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
