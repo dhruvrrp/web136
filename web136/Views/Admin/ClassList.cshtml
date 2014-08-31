@@ -1,12 +1,12 @@
 ﻿@{
-    ViewBag.Title = "ScheduleDay";
+    ViewBag.Title = "ClassList";
     Layout = "~/Views/Shared/_Layout.cshtml";
     var id = ViewBag.id;
 }
 
-<h3>Manage Day Schedule</h3>
+<h3>View All Classes</h3>
 
-<div id="divScheduleDayContent">
+<div id="divClassList">
     <a href="~/Admin/Index?id=@ViewBag.id">Back</a>
     <table>
         <thead>
@@ -19,8 +19,8 @@
         </thead>
         <tbody data-bind="foreach: viewModel">
             <tr>
-                <td><a href="~/Admin/EditClass?id=@ViewBag.id">Edit</a></td>
-                <td><a href="">Delete</a></td>
+                <td><a href="~/Admin/EditCourse?id=@ViewBag.id">Edit</a></td>
+                <td><a href="~/Admin/Index?id=@ViewBag.id">Delete</a></td>
                 <td data-bind="text: title"></td>
                 <td data-bind="text: description"></td>
             </tr>

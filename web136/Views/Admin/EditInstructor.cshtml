@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "EditInstructor";
+    var id = ViewBag.id;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Edit Instructor</h3>
+
+<div id="divEditInstructor">
+    <a href="~/Admin/Index?id=@ViewBag.id">Back</a><br /><br />
+    <form action="~/Admin/Index?id=@ViewBag.id" method="post">
+        ID:<br />
+        <input type="text" /><br />
+        First Name:<br />
+        <input type="text" /><br />
+        Last Name:<br />
+        <input type="text" /><br />
+        Email:<br />
+        <input type="text" /><br /><br />
+        <input type="submit" value="Submit" />
+    </form>
+</div>
