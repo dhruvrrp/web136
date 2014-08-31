@@ -45,21 +45,25 @@
             ViewBag.id = id;
             return this.View();
         }
+
         public ActionResult NewCourse(int id)
         {
             ViewBag.id = id;
             return this.View();
         }
+
         public ActionResult EditCourse(int id)
         {
             ViewBag.id = id;
             return this.View();
         }
+
         public ActionResult EditStudent(int id)
         {
             ViewBag.id = id;
             return this.View();
         }
+
         public ActionResult EditInstructor(int id)
         {
             ViewBag.id = id;
