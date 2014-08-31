@@ -33,7 +33,34 @@
                     callback('Error while updating admin info');
                 }
             });
+        };
 
+        this.Create = function (adminData, callback) {
+            $.ajax({
+                method: 'POST',
+                url: "http://localhost:5419/Api/Admin/InsertAdmin",
+                data: adminData,
+                success: function (message) {
+                    callback(message);
+                },
+                error: function () {
+                    callback('Error while updating admin info');
+                }
+            });
+        };
+
+        this.Delete = function (adminId, callback) {
+            $ajax({
+                method: 'POST',
+                url: "http://localhost5419/Api/Admin/DeleteAdmin",
+                data: adminId,
+                success: function (message) {
+                    callback(message);
+                },
+                error: function () {
+                    callback('Error while updating admin info');
+                }
+            });
         };
     }
 
