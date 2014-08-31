@@ -1,11 +1,13 @@
 ﻿@{
     ViewBag.Title = "Staff";
+    var id = ViewBag.id;
 }
 
 <h2>Staff</h2>
-
-<p>What does a staff able to do?</p>
 <ul>
-    <li><a href="~/Staff/StudentList">Manage student account</a></li>
+    <!-- TODO -->
+    <li><a href="~/Staff/EditStaff?id=@ViewBag.id">Edit Login Information</a></li>
+    <li><a href="~/Staff/StudentList?id=@ViewBag.id">Manage student accounts</a></li>
+    <li><a href="~/Staff/GetEnrollments?id=@ViewBag.id">Review class enrollments</a></li>
     <li>What else?</li>
 </ul>

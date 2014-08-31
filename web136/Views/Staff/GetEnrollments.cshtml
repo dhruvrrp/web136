@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "GetEnrollments";
+    var id = ViewBag.id;
+}
+<h2>Retrieve Class Enrollment List</h2>
+
+<div id="divEnrollmentByProfessor">
+    <a href="~/Staff/Index?id=@ViewBag.id">< Back</a><br /><br />
+    <p>by Professor</p>
+
+    First Name : <input type="text" data-bind="value: $data.first" /><br />
+    <br />
+    Last Name : <input type="text" data-bind="value: $data.last" /><br />
+    <br />
+    <input type="button" value="Search" data-bind="value: 'Search', click: $data.update" style="margin-left:80px" />
+    <br /><br />
+    <div id="divMessage"></div>
+</div>
+
+<div id="divEnrollmentByClass">
+    <p>by Class</p>
+    Class ID : <input type="text" data-bind="value: $data.first" /><br />
+    <br />
+    <input type="button" value="Search" data-bind="value: 'Search', click: $data.update" style="margin-left:80px" />
+    <br /><br />
+    <div id="divMessage"></div>
+</div>

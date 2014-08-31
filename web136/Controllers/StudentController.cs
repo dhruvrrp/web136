@@ -15,5 +15,20 @@
             ViewBag.Id = id;
             return this.View();
         }
+        public ActionResult ViewEnrollments(string id)
+        {
+            ViewBag.Id = id;
+            return this.View();
+        }
+        public ActionResult AddEnrollment(string id)
+        {
+            ViewBag.Id = id;
+            return this.View();
+        }
+        public ActionResult ViewGPA(string id)
+        {
+            ViewBag.Id = id;
+            return this.View();
+        }
     }
 }

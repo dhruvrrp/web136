@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "GradeStudent";
+    var id = ViewBag.id;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Edit Course</h3>
+
+<div id="divGradeStudent">
+    <a href="~/Staff/Index?id=@ViewBag.id">Back</a><br /><br />
+    <form action="~/Staff/Index?id=@ViewBag.id" method="post">
+        Grade:<br />
+        <input type="text" /><br /><br />
+        <input type="submit" value="Submit" />
+    </form>
+</div>

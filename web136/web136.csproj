@@ -223,6 +223,7 @@
     <Content Include="Scripts\136Libraries\Models\AdminModel.js" />
     <Content Include="Scripts\136Libraries\Models\CourseListModel.js" />
     <Content Include="Scripts\136Libraries\Models\LoginModel.js" />
+    <Content Include="Scripts\136Libraries\Models\StaffModel.js" />
     <Content Include="Scripts\136Libraries\Models\StudentModel.js" />
     <Content Include="Scripts\136Libraries\ViewModels\AdminViewModel.js" />
     <Content Include="Scripts\136Libraries\ViewModels\CourseListViewModel.js" />
@@ -286,14 +287,10 @@
     <Content Include="Views\Student\Edit.cshtml" />
     <Content Include="Views\Shared\SharedEditStudent.cshtml" />
     <Content Include="Views\JasmineTest\Index.cshtml" />
-    <Content Include="Views\Admin\ClassList.cshtml" />
-    <Content Include="Views\Admin\NewStudent.cshtml" />
-    <Content Include="Views\Admin\NewInstructor.cshtml" />
-    <Content Include="Views\Admin\NewCourse.cshtml" />
-    <Content Include="Views\Admin\EditCourse.cshtml" />
-    <Content Include="Views\Admin\EditStudent.cshtml" />
-    <Content Include="Views\Admin\InstructorList.cshtml" />
-    <Content Include="Views\Admin\EditInstructor.cshtml" />
+    <Content Include="Views\Student\ViewEnrollments.cshtml" />
+    <Content Include="Views\Student\AddEnrollment.cshtml" />
+    <Content Include="Views\Shared\SharedViewStudentGPA.cshtml" />
+    <Content Include="Views\Student\ViewGPA.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
