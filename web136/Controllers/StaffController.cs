@@ -20,7 +20,19 @@
             return this.View();
         }
 
-        public ActionResult GetClassEnrollment(string id)
+        public ActionResult GetEnrollments(string id)
+        {
+            ViewBag.id = id;
+            return this.View();
+        }
+
+        public ActionResult GetEnrollmentsByClass(string id)
+        {
+            ViewBag.id = id;
+            return this.View();
+        }
+
+        public ActionResult GetEnrollmentsByProfessor(string id)
         {
             ViewBag.id = id;
             return this.View();
@@ -31,6 +43,10 @@
             return this.View();
         }
 
-
+        public ActionResult EditStaff(string id)
+        {
+            ViewBag.id = id;
+            return this.View();
+        }
     }
 }

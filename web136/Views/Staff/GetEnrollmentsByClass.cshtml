@@ -1,37 +1,5 @@
 ﻿@{
-    ViewBag.Title = "EditStaff";
-    var id = ViewBag.id;
+    ViewBag.Title = "GetEnrollmentsByClass";
 }
-<h2>Retrieve Class Enrollment List</h2>
 
-<div id="divEnrollmentByProfessor">
-    <b>by Professor</b>
-    First Name : <input type="text" data-bind="value: $data.first" /><br />
-    <br />
-    Last Name : <input type="text" data-bind="value: $data.last" /><br />
-    <br />
-    <input type="button" data-bind="value: 'Search', click: $data.update" style="margin-left:80px" />
-    <br /><br />
-    <div id="divMessage"></div>
-</div>
-
-<div id="divEnrollmentByClass">
-    <b>by Class</b>
-    Class ID : <input type="text" data-bind="value: $data.first" /><br />
-    <br />
-    <input type="button" data-bind="value: 'Search', click: $data.update" style="margin-left:80px" />
-    <br /><br />
-    <div id="divMessage"></div>
-</div>
-
-<script type="text/javascript">
-    $(document).ready(function () {
-        // this require[] will load the /Scripts/136Libraries/ViewModels/AdminViewModel.js file
-        // and return the object inside it and assign to adminViewModel variable.
-        require(['ViewModels/StaffViewModel'], function (staffViewModel) {
-            var viewModel = new staffViewModel();
-            viewModel.Load(@id);
-        });
-    });
-
-</script>
+<h2>GetEnrollmentsByClass</h2>

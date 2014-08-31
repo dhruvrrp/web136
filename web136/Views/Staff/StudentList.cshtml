@@ -1,9 +1,11 @@
 ﻿@{
     ViewBag.Title = "GetStudents";
+    var id = ViewBag.id;
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h3>Student List Page</h3>
-<a href="/Staff/Index"><< back</a>
+<a href="/Staff/Index?id=@ViewBag.id"><< back</a>
 <div id="divStudentListContent">
     <table>
         <thead>

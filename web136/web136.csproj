@@ -227,6 +227,7 @@
     <Content Include="Scripts\136Libraries\ViewModels\AdminViewModel.js" />
     <Content Include="Scripts\136Libraries\ViewModels\CourseListViewModel.js" />
     <Content Include="Scripts\136Libraries\ViewModels\LoginViewModel.js" />
+    <Content Include="Scripts\136Libraries\ViewModels\StaffViewModel.js" />
     <Content Include="Scripts\136Libraries\ViewModels\StudentViewModel.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -295,8 +296,9 @@
     <Content Include="Views\Admin\InstructorList.cshtml" />
     <Content Include="Views\Admin\EditInstructor.cshtml" />
     <Content Include="Views\Staff\EditStaff.cshtml" />
-    <Content Include="Views\Staff\GetEnrollmentsByClass.cshtml" />
+    <Content Include="Views\Staff\GetEnrollments.cshtml" />
     <Content Include="Views\Staff\GetEnrollmentsByProfessor.cshtml" />
+    <Content Include="Views\Staff\GetEnrollmentsByClass.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
