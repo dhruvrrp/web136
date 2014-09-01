@@ -228,7 +228,8 @@
     <Content Include="Scripts\136Libraries\ViewModels\AdminViewModel.js" />
     <Content Include="Scripts\136Libraries\ViewModels\CourseListViewModel.js" />
     <Content Include="Scripts\136Libraries\ViewModels\LoginViewModel.js" />
-    <Content Include="Scripts\136Libraries\ViewModels\StudentViewModel.js" />
+    <Content Include="Scripts\136Libraries\ViewModels\StaffViewModel.js" />
+	<Content Include="Scripts\136Libraries\ViewModels\StudentViewModel.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\Jasmine\lib\jasmine-2.0.0\boot.js" />
@@ -274,6 +275,7 @@
     <Content Include="Views\Schedule\Index.cshtml" />
     <Content Include="Views\Shared\SharedStudentEnrollment.cshtml" />
     <Content Include="Views\Staff\CreateStudent.cshtml" />
+	<Content Include="Views\Staff\GradeStudent.cshtml" />
     <Content Include="Views\Staff\EditStudent.cshtml" />
     <Content Include="Views\Admin\StudentList.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
@@ -287,6 +289,18 @@
     <Content Include="Views\Student\Edit.cshtml" />
     <Content Include="Views\Shared\SharedEditStudent.cshtml" />
     <Content Include="Views\JasmineTest\Index.cshtml" />
+	<Content Include="Views\Admin\ClassList.cshtml" />
+    <Content Include="Views\Admin\NewStudent.cshtml" />
+    <Content Include="Views\Admin\NewInstructor.cshtml" />
+    <Content Include="Views\Admin\NewCourse.cshtml" />
+    <Content Include="Views\Admin\EditCourse.cshtml" />
+    <Content Include="Views\Admin\EditStudent.cshtml" />
+    <Content Include="Views\Admin\InstructorList.cshtml" />
+    <Content Include="Views\Admin\EditInstructor.cshtml" />
+    <Content Include="Views\Staff\EditStaff.cshtml" />
+    <Content Include="Views\Staff\GetEnrollments.cshtml" />
+    <Content Include="Views\Staff\GetEnrollmentsByProfessor.cshtml" />
+    <Content Include="Views\Staff\GetEnrollmentsByClass.cshtml" />
     <Content Include="Views\Student\ViewEnrollments.cshtml" />
     <Content Include="Views\Student\AddEnrollment.cshtml" />
     <Content Include="Views\Shared\SharedViewStudentGPA.cshtml" />
