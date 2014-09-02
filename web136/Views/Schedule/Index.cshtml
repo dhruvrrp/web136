@@ -6,3 +6,12 @@
 <h3>Schedule of classes</h3>
 
 136 TODO: Show a list of course schedule & filtered by year & quarter
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        require(['ViewModels/ScheduleListViewModel'], function (scheduleListViewModel) {
+            var scheduleListViewModelObj = new scheduleListViewModel();
+            scheduleListViewModelObj.Load();
+        });
+    });
+</script>
