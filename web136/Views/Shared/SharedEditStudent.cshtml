@@ -8,11 +8,11 @@
 
 
 <!--<a href="/Staff/StudentList"><< back</a>-->
-<div id="divStudent">
+<div id="divEditStudent">
     <table>
         <tr>
             <td>Id</td>
-            <td><input data-bind="value: id" /> (at least 5 chars)</td>
+            <td>@id</td>
         </tr>
         <tr>
             <td>SSN</td>
@@ -44,9 +44,16 @@
         </tr>
         <tr>
             <td></td>
-            <td><button data-bind="click: add">Edit</button></td>
+            <td><button data-bind="click: edit">Edit</button></td>
         </tr>
     </table>
 </div>
 
-
+<script type="text/javascript">
+    $(document).ready(function () {
+        require(['ViewModels/StudentEditViewModel'], function (StudentEditViewModel) {
+            var StudentEditViewModelObj = new StudentEditViewModel(id);
+            StudentEditViewModelObj.Initialize();
+        });
+    });
+</script>

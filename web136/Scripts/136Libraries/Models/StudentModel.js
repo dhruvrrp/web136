@@ -28,6 +28,22 @@
             });
         };
 
+        this.Edit = function (student, callback) {
+            $.ajax({
+                async: asyncIndicator,
+                method: "POST",
+                url: "http://localhost:5419/Api/Student/InsertStudent",
+                data: student,
+                dataType: "json",
+                success: function (result) {
+                    callback(result);
+                },
+                error: function () {
+                    alert('Error while adding student.  Is your service layer running?');
+                }
+            });
+        };
+
         this.Delete = function (id, callback) {
             $.ajax({
                 async: asyncIndicator,
