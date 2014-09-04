@@ -50,9 +50,12 @@
 </div>
 
 <script type="text/javascript">
+    console.log("!!! before load");
     $(document).ready(function () {
-        require(['ViewModels/StudentEditViewModel'], function (StudentEditViewModel) {
-            var StudentEditViewModelObj = new StudentEditViewModel(id);
+        console.log("load complete");
+        require(['ViewModels/StudentEditViewModel'], function (studentEditViewModel) {
+            console.log("Initializing");
+            var StudentEditViewModelObj = new studentEditViewModel("@ViewBag.Id");
             StudentEditViewModelObj.Initialize();
         });
     });

@@ -232,6 +232,7 @@
     <Content Include="Scripts\136Libraries\ViewModels\AdminViewModel.js" />
     <Content Include="Scripts\136Libraries\ViewModels\CourseListViewModel.js" />
     <Content Include="Scripts\136Libraries\ViewModels\SharedStudentEnrollmentViewModel.js" />
+    <Content Include="Scripts\136Libraries\ViewModels\StudentGPAViewModel.js" />
     <Content Include="Scripts\136Libraries\ViewModels\StudentEditViewModel.js" />
     <Content Include="Scripts\136Libraries\ViewModels\LoginViewModel.js" />
     <Content Include="Scripts\136Libraries\ViewModels\ScheduleListViewModel.js" />
