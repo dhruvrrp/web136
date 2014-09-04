@@ -4,5 +4,52 @@
 }
 
 <h3>Schedule of classes</h3>
+<!--NOT FINISHED, jonathan smith -->
+
+<div id="yearSelect">
+    <select name="yearSelectDropdown" data-bind="foreach:ViewModel" onchange="populateQuarter()">
+        <option data-bind="text: year"></option>
+    </select>
+</div>
+
+<div id="quarterSelect">
+    <select name="quarterSelectDropdown" data-bind="foreach:ViewModel">
+        <option data-bind="text: quarter">1</option>
+    </select>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        require(['ViewModels/ScheduleYearViewModel'], function (scheduleYearViewModel) {
+            var scheduleYearViewModelObj = new scheduleYearViewModel();
+            scheduleYearViewModelObj.Load();
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        require(['ViewModels/ScheduleQuarterViewModel'], function (scheduleQuarterViewModel) {
+            var scheduleQuarterViewModelObj = new scheduleQuarterViewModel();
+            scheduleQuarterViewModelObj.Load();
+        });
+    });
+</script>
+
+<script>
+    function populateQuarter()
+    {
+        
+    }
+</script>
 
 136 TODO: Show a list of course schedule & filtered by year & quarter
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        require(['ViewModels/ScheduleListViewModel'], function (scheduleListViewModel) {
+            var scheduleListViewModelObj = new scheduleListViewModel();
+            scheduleListViewModelObj.Load();
+        });
+    });
+</script>
