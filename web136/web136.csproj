@@ -226,10 +226,12 @@
     <Content Include="Scripts\136Libraries\Models\ScheduleYearModel.js" />
     <Content Include="Scripts\136Libraries\Models\LoginModel.js" />
     <Content Include="Scripts\136Libraries\Models\ScheduleQuarterModel.js" />
+    <Content Include="Scripts\136Libraries\Models\SharedStudentEnrollmentModel.js" />
     <Content Include="Scripts\136Libraries\Models\StaffModel.js" />
     <Content Include="Scripts\136Libraries\Models\StudentModel.js" />
     <Content Include="Scripts\136Libraries\ViewModels\AdminViewModel.js" />
     <Content Include="Scripts\136Libraries\ViewModels\CourseListViewModel.js" />
+    <Content Include="Scripts\136Libraries\ViewModels\SharedStudentEnrollmentViewModel.js" />
     <Content Include="Scripts\136Libraries\ViewModels\StudentEditViewModel.js" />
     <Content Include="Scripts\136Libraries\ViewModels\LoginViewModel.js" />
     <Content Include="Scripts\136Libraries\ViewModels\ScheduleListViewModel.js" />

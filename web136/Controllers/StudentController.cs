@@ -33,5 +33,12 @@
             ViewBag.Id = id;
             return this.View();
         }
+
+        public ActionResult SharedStudentEnrollment(string id, string studentID)
+        {
+            ViewBag.Id = id;
+            ViewBag.studentID = studentID;
+            return this.View();
+        }
     }
 }

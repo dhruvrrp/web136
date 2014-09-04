@@ -1,7 +1,6 @@
 ﻿// StudentViewModel depends on the Models/StudentModel to process requests (Load)
 define(['Models/StudentModel'], function (StudentModel) {
     function StudentEditViewModel(id) {
-
         var StudentModelObj = new StudentModel();
         var that = this;
         var initialBind = true;

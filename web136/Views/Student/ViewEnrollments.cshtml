@@ -5,7 +5,8 @@
 
 <h2>ViewEnrollments</h2>
 <a href="/Student?id=@id"><< back</a>
-<div id="divEnrollmentListContent">
+@Html.Partial("SharedStudentEnrollment")
+<!--<div id="divEnrollmentListContent">
     <table>
         <thead>
             <tr>
@@ -34,7 +35,7 @@
                 <th>Friday 6-11 pm</th>
             </tr>
 
-        <!--
+
         <tbody data-bind="foreach: viewModel">
             <tr>
                 <td data-bind="text: id"></td>
