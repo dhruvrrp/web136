@@ -32,7 +32,7 @@
             $.ajax({
                 async: asyncIndicator,
                 method: "POST",
-                url: "http://localhost:5419/Api/Student/InsertStudent",
+                url: "http://localhost:5419/Api/Student/UpdateStudent",
                 data: student,
                 dataType: "json",
                 success: function (result) {
@@ -92,6 +92,8 @@
             });
         };
         this.GetStudentGPA = function (id, callback) {
+            console.log(id);
+            alert(id);
             $.ajax({
                 async: asyncIndicator,
                 method: "GET",

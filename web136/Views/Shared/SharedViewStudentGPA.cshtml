@@ -3,6 +3,22 @@
 }
 
 <h2>ViewStudentGPA</h2>
+<div id="studentGPA">
 
-<p>Student X's GPA is</p>
-<p> 3.8 </p>
+
+    <p>Student X's GPA is</p>
+    <p id="GPA" data-bind="value: GPA"></p>
+</div>
+
+
+<script type="text/javascript">
+    console.log("!!! before load");
+    $(document).ready(function () {
+        console.log("load complete");
+        require(['ViewModels/StudentGPAViewModel'], function (studentGPAViewModel) {
+            console.log("Initializing" + "@ViewBag.Id" + " huuuh");
+            var StudentGPAViewModelObj = new studentGPAViewModel("@ViewBag.Id");
+            StudentGPAViewModelObj.Initialize();
+        });
+    });
+</script>
