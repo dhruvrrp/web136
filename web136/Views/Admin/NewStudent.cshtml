@@ -4,25 +4,4 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h3>New Student</h3>
-
-<div id="divNewStudent">
-    <a href="~/Admin/Index?id=@ViewBag.id">Back</a><br /><br />
-    <form action="~/Admin/Index?id=@ViewBag.id" method="post">
-        ID:<br />
-        <input type="text" /><br />
-        SSN:<br />
-        <input type="text" /><br />
-        First Name:<br />
-        <input type="text" /><br />
-        Last Name:<br />
-        <input type="text" /><br />
-        Email:<br />
-        <input type="text" /><br />
-        Shoe Size:<br />
-        <input type="text" /><br />
-        Weight:<br />
-        <input type="text" /><br /><br />
-        <input type="submit" value="Submit" />
-    </form>
-</div>
+@Html.Partial("SharedCreateStudent")

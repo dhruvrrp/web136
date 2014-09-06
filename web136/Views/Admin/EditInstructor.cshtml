@@ -3,20 +3,43 @@
     var id = ViewBag.id;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<h3>Edit</h3>
 
-<h3>Edit Instructor</h3>
+
 
 <div id="divEditInstructor">
-    <a href="~/Admin/Index?id=@ViewBag.id">Back</a><br /><br />
-    <form action="~/Admin/Index?id=@ViewBag.id" method="post">
-        ID:<br />
-        <input type="text" /><br />
-        First Name:<br />
-        <input type="text" /><br />
-        Last Name:<br />
-        <input type="text" /><br />
-        Email:<br />
-        <input type="text" /><br /><br />
-        <input type="submit" value="Submit" />
-    </form>
+    <table>
+        <tr>
+            <td>Id</td>
+            <td>@id</td>
+        </tr>
+        <tr>
+            <td>First</td>
+            <td><input data-bind="value: first" /></td>
+        </tr>
+        <tr>
+            <td>Last</td>
+            <td><input data-bind="value: last" /></td>
+        </tr>
+        <tr>
+            <td>Title</td>
+            <td><input data-bind="value: title" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button data-bind="click: edit">Edit</button></td>
+        </tr>
+    </table>
 </div>
+
+<script type="text/javascript">
+    console.log("!!! before load");
+    $(document).ready(function () {
+        console.log("load complete");
+        require(['ViewModels/InstructorViewModel'], function (instructorViewModel) {
+            console.log("Initializing");
+            var InstructorViewModelObj = new instructorViewModel();
+            InstructorViewModelObj.Edit(@id);
+        });
+    });
+</script>

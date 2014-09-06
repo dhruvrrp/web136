@@ -16,12 +16,12 @@
             return this.View();
         }
 
-        public ActionResult ViewEnrollments(string id)
+ /*       public ActionResult ViewEnrollments(string id)
         {
             ViewBag.Id = id;
             return this.View();
         }
-
+        */
         public ActionResult AddEnrollment(string id)
         {
             ViewBag.Id = id;
@@ -31,6 +31,13 @@
         public ActionResult ViewGPA(string id)
         {
             ViewBag.Id = id;
+            return this.View();
+        }
+
+        public ActionResult ViewEnrollments(string id, string studentID)
+        {
+            ViewBag.Id = id;
+            ViewBag.studentID = studentID;
             return this.View();
         }
     }

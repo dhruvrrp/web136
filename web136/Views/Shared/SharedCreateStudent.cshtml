@@ -1,18 +1,14 @@
 ﻿@{
-    var id = ViewBag.Id;
+    ViewBag.Title = "SharedCreateStudent";
 }
-<h3>Edit</h3>
 
-@id
-136 TODO : edit the student record
+<h2>SharedCreateStudent</h2>
 
-
-<!--<a href="/Staff/StudentList"><< back</a>-->
-<div id="divEditStudent">
+<div id="divStudent">
     <table>
         <tr>
             <td>Id</td>
-            <td>@id</td>
+            <td><input data-bind="value: id" /> (at least 5 chars)</td>
         </tr>
         <tr>
             <td>SSN</td>
@@ -44,19 +40,16 @@
         </tr>
         <tr>
             <td></td>
-            <td><button data-bind="click: edit">Edit</button></td>
+            <td><button data-bind="click: add">Add</button></td>
         </tr>
     </table>
 </div>
 
 <script type="text/javascript">
-    console.log("!!! before load");
     $(document).ready(function () {
-        console.log("load complete");
-        require(['ViewModels/StudentEditViewModel'], function (studentEditViewModel) {
-            console.log("Initializing");
-            var StudentEditViewModelObj = new studentEditViewModel("@ViewBag.Id");
-            StudentEditViewModelObj.Initialize();
+        require(['ViewModels/StudentViewModel'], function (studentViewModel) {
+            var studentViewModelObj = new studentViewModel();
+            studentViewModelObj.Initialize();
         });
     });
 </script>

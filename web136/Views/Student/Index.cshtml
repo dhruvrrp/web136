@@ -39,13 +39,10 @@
     </table>
 
     <ul>
-        <li><a href="~/Student/ViewEnrollments?Id=@id">View Enrollments</a></li>
-        <li><a href="~/Student/ViewGPA?=@id">View GPA</a></li>
+        <li><a href="~/Student/ViewEnrollments?id=@id&studentID=@id">View Enrollments</a></li>
+        <li><a href="~/Student/ViewGPA?Id=@id">View GPA</a></li>
     </ul>
 </div>
-
-@Html.Partial("SharedStudentEnrollment")
-
 <script type="text/javascript">
     $(document).ready(function () {
         require(['ViewModels/StudentViewModel'], function (studentViewModel) {

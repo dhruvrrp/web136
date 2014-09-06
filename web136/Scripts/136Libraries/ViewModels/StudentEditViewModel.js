@@ -1,7 +1,7 @@
 ﻿// StudentViewModel depends on the Models/StudentModel to process requests (Load)
 define(['Models/StudentModel'], function (StudentModel) {
+    console.log("StudentEditViewModel");
     function StudentEditViewModel(id) {
-
         var StudentModelObj = new StudentModel();
         var that = this;
         var initialBind = true;
@@ -11,7 +11,6 @@ define(['Models/StudentModel'], function (StudentModel) {
 
 
             StudentModelObj.GetDetail(id, function (result) {
-
                 var student = {
                     
                     first: ko.observable(result.FirstName),
@@ -27,7 +26,7 @@ define(['Models/StudentModel'], function (StudentModel) {
                 };
 
                 if (initialBind) {
-                    ko.applyBindings({ viewModel: student }, document.getElementById("divEditStudent"));
+                    ko.applyBindings( student, document.getElementById("divEditStudent"));
                 }
             });
 
@@ -48,15 +47,15 @@ define(['Models/StudentModel'], function (StudentModel) {
 
             StudentModelObj.Edit(model, function (result) {
                 if (result == "ok") {
-                    alert("Create student successful");
+                    alert("Editing student successful");
                 } else {
-                    alert("Error occurred");
+                    alert("Error occurred" + result);
                 }
             });
 
         };
     }
 
-    return StudentViewModel;
+    return StudentEditViewModel;
 }
 );

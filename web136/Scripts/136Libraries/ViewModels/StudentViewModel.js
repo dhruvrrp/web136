@@ -1,5 +1,6 @@
 ﻿// StudentViewModel depends on the Models/StudentModel to process requests (Load)
 define(['Models/StudentModel'], function (StudentModel) {
+    console.log("StudentViewModel");
     function StudentViewModel() {
 
         var StudentModelObj = new StudentModel();

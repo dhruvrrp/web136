@@ -22,7 +22,8 @@
         </thead>
         <tbody data-bind="foreach: viewModel">
             <tr>
-                <td><a href="~/Admin/EditStudent?id=@ViewBag.id">Edit</a></td>
+                <td><a data-bind="attr:{href:'/Admin/EditStudent?id='+id}">Edit</a></td>
+             <!--  <td><a href="~/Admin/EditStudent?id=" data-bind="text: id">Edit</a></td>--> 
                 <td><a href="~/Admin/Index?id=@ViewBag.id">Delete</a></td>
                 <td data-bind="text: id"></td>
                 <td data-bind="text: first"></td>

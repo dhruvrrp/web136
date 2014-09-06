@@ -1,6 +1,6 @@
 ﻿define([], function () {
     $.support.cors = true;
-    
+
     //// THe reason for asyncIndicator is to make sure Jasmine test cases can run without error
     //// Due to async nature of ajax, the Jasmine's compare function would throw an error during
     //// a callback. By allowing this optional paramter for StudentModel function, it forces the ajax
@@ -12,34 +12,35 @@
             asyncIndicator = true;
         }
 
-        this.Create = function (student, callback) {
+        this.Create = function (Instructor, callback) {
             $.ajax({
                 async: asyncIndicator,
                 method: "POST",
-                url: "http://localhost:5419/Api/Student/InsertStudent",
-                data: student,
+                url: "http://localhost:5419/Api/Instructor/InsertInstructor",
+                data: Instructor,
                 dataType: "json",
                 success: function (result) {
                     callback(result);
                 },
                 error: function () {
-                    alert('Error while adding student.  Is your service layer running?');
+                    alert('Error while adding instructor.  Is your service layer running?');
                 }
             });
         };
 
-        this.Edit = function (student, callback) {
+        this.Edit = function (Instructor, callback) {
+            console.log("Edit ajax" + Instructor);
             $.ajax({
                 async: asyncIndicator,
                 method: "POST",
-                url: "http://localhost:5419/Api/Student/UpdateStudent",
-                data: student,
+                url: "http://localhost:5419/Api/Instructor/UpdateInstructor",
+                data: Instructor,
                 dataType: "json",
                 success: function (result) {
                     callback(result);
                 },
                 error: function () {
-                    alert('Error while adding student.  Is your service layer running?');
+                    alert('Error while editing instructor.  Is your service layer running?');
                 }
             });
         };
@@ -48,14 +49,14 @@
             $.ajax({
                 async: asyncIndicator,
                 method: "POST",
-                url: "http://localhost:5419/Api/Student/DeleteStudent?id=" + id,
+                url: "http://localhost:5419/Api/Instructor/DeleteInstructor?id=" + id,
                 data: '',
                 dataType: "json",
                 success: function (result) {
                     callback(result);
                 },
                 error: function () {
-                    alert('Error while deleteing student.  Is your service layer running?');
+                    alert('Error while deleting instructor.  Is your service layer running?');
                 }
             });
         };
@@ -64,81 +65,51 @@
             $.ajax({
                 async: asyncIndicator,
                 method: "GET",
-                url: "http://localhost:5419/Api/Student/GetStudentList",
+                url: "http://localhost:5419/Api/Instructor/GetInstructorList",
                 data: "",
                 dataType: "json",
                 success: function (result) {
                     callback(result);
                 },
                 error: function () {
-                    alert('Error while loading student list.  Is your service layer running?');
+                    alert('Error while loading instructor list.  Is your service layer running?');
                 }
             });
         };
 
         this.GetDetail = function (id, callback) {
-            $.ajax({
-                async: asyncIndicator,
-                method: "GET",
-                url: "http://localhost:5419/Api/Student/GetStudent?id=" + id,
-                data: "",
-                dataType: "json",
-                success: function (result) {
-                    callback(result);
-                },
-                error: function () {
-                    alert('Error while loading student detail.  Is your service layer running?');
-                }
-            });
-        };
-        this.GetStudentGPA = function (id, callback) {
-            alert(id);
-            console.log(id);
-            alert(id);
-            $.ajax({
-                async: asyncIndicator,
-                method: "GET",
-                url: "http://localhost:5419/Api/Student/GetStudentGPA?id=" + id,
-                data: "",
-                dataType: "json",
-                success: function (result) {
-                    callback(result);
-                },
-                error: function () {
-                    alert('Error while loading student detail.  Is your service layer running?');
-                }
-            });
-        };
-        this.EnrollSchedule = function (id, callback) {
+            console.log("instructor detail " + id);
             $.ajax({
                 async: asyncIndicator,
                 method: "POST",
-                url: "http://localhost:5419/Api/Student/EnrollSchedule?id=" + id,
+                url: "http://localhost:5419/Api/Instructor/GetInstructor?id=" + id,
                 data: "",
                 dataType: "json",
                 success: function (result) {
                     callback(result);
                 },
                 error: function () {
-                    alert('Error while loading student detail.  Is your service layer running?');
+                    alert('Error while loading instructor detail.  Is your service layer running?');
                 }
             });
         };
-        this.DropEnrolledSchedule = function (id, callback) {
+        this.AssignToClass = function (id, callback) {
+
             $.ajax({
                 async: asyncIndicator,
                 method: "GET",
-                url: "http://localhost:5419/Api/Student/DropEnrolledSchedule?id=" + id,
+                url: "http://localhost:5419/Api/Instructor/AssignInstructorToClass?id=" + id,
                 data: "",
                 dataType: "json",
                 success: function (result) {
                     callback(result);
                 },
                 error: function () {
-                    alert('Error while loading student detail.  Is your service layer running?');
+                    alert('Error while assigning instructor.  Is your service layer running?');
                 }
             });
         };
+        
     }
 
     return StudentModel;

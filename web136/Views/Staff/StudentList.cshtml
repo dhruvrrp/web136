@@ -42,8 +42,11 @@
 </script>
 
 <script type="text/javascript">
+    console.log("!!! before load");
     $(document).ready(function () {
+        console.log("load complete");
         require(['ViewModels/StudentViewModel'], function (studentViewModel) {
+            console.log("get all?");
             var studentViewModelObj = new studentViewModel();
             studentViewModelObj.GetAll();
         });

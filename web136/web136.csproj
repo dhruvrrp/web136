@@ -222,14 +222,19 @@
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\136Libraries\Models\AdminModel.js" />
     <Content Include="Scripts\136Libraries\Models\CourseListModel.js" />
+    <Content Include="Scripts\136Libraries\Models\InstructorModel.js" />
     <Content Include="Scripts\136Libraries\Models\ScheduleListModel.js" />
     <Content Include="Scripts\136Libraries\Models\ScheduleYearModel.js" />
     <Content Include="Scripts\136Libraries\Models\LoginModel.js" />
     <Content Include="Scripts\136Libraries\Models\ScheduleQuarterModel.js" />
+    <Content Include="Scripts\136Libraries\Models\SharedStudentEnrollmentModel.js" />
     <Content Include="Scripts\136Libraries\Models\StaffModel.js" />
     <Content Include="Scripts\136Libraries\Models\StudentModel.js" />
     <Content Include="Scripts\136Libraries\ViewModels\AdminViewModel.js" />
     <Content Include="Scripts\136Libraries\ViewModels\CourseListViewModel.js" />
+    <Content Include="Scripts\136Libraries\ViewModels\InstructorViewModel.js" />
+    <Content Include="Scripts\136Libraries\ViewModels\SharedStudentEnrollmentViewModel.js" />
+    <Content Include="Scripts\136Libraries\ViewModels\StudentGPAViewModel.js" />
     <Content Include="Scripts\136Libraries\ViewModels\StudentEditViewModel.js" />
     <Content Include="Scripts\136Libraries\ViewModels\LoginViewModel.js" />
     <Content Include="Scripts\136Libraries\ViewModels\ScheduleListViewModel.js" />
@@ -312,6 +317,8 @@
     <Content Include="Views\Student\AddEnrollment.cshtml" />
     <Content Include="Views\Shared\SharedViewStudentGPA.cshtml" />
     <Content Include="Views\Student\ViewGPA.cshtml" />
+    <Content Include="Views\Admin\DeleteStudent.cshtml" />
+    <Content Include="Views\Shared\SharedCreateStudent.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
