@@ -16,18 +16,26 @@
                 <th>Id</th>
                 <th>First</th>
                 <th>Last</th>
-                <th>Email</th>
+                <th>Title</th>
             </tr>
         </thead>
         <tbody data-bind="foreach: viewModel">
             <tr>
-                <td><a href="~/Admin/EditInstructor?id=@ViewBag.id">Edit</a></td>
+                <td><a data-bind="attr:{href:'/Admin/EditInstructor?id='+id}">Edit</a></td>
                 <td><a href="~/Admin/Index?id=@ViewBag.id">Delete</a></td>
-                <td>1</td>
-                <td>Isaac</td>
-                <td>Chu</td>
-                <td>ichu@ucsd.edu</td>
+                <td data-bind="text: id"></td>
+                <td data-bind="text: first"></td>
+                <td data-bind="text: last"></td>
+                <td data-bind="text: title"></td>
             </tr>
         </tbody>
     </table>
 </div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        require(['ViewModels/InstructorViewModel'], function (studentViewModel) {
+            var studentViewModelObj = new studentViewModel();
+            studentViewModelObj.GetAll();
+        });
+    });
+</script>

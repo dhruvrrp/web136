@@ -58,13 +58,19 @@
             return this.View();
         }
 
-        public ActionResult EditStudent(int id)
+        public ActionResult EditStudent(string id)
         {
             ViewBag.id = id;
             return this.View();
         }
 
         public ActionResult EditInstructor(int id)
+        {
+            ViewBag.id = id;
+            return this.View();
+        }
+
+        public ActionResult DeleteStudent(string id)
         {
             ViewBag.id = id;
             return this.View();
