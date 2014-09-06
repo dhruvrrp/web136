@@ -8,8 +8,8 @@
         // The best way to retain the "this" pointer is to assign to another variable.
         // Common name to use it "that".
         var that = this;
+        this.Load = function (studentID, callback) {
 
-        this.Load = function (callback, studentID) {
             $.ajax({
                 url: "http://localhost:5419/Api/Student/GetEnrollments?studentID=" + studentID,
                 data: "",
