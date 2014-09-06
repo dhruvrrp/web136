@@ -3,10 +3,8 @@
     var studentID = ViewBag.studentID;
 }
 <h3>Current Enrollment</h3>
-
+StudentID: @studentID
 @id
-136 TODO: for a given student, show all his course schedule enrollment. Allow add & delete of enrollments
-(The reason this is under the /Shared folder is that both staff and student should be able to update enrollments)
 
 <div id="divSharedStudentEnrollment">
     <table>
@@ -31,8 +29,7 @@
     $(document).ready(function () {
         require(['ViewModels/SharedStudentEnrollmentViewModel'], function (sharedStudentEnrollmentViewModel) {
             var sharedStudentEnrollmentViewModelObj = new sharedStudentEnrollmentViewModel();
-            alert("loading pre");
-            sharedStudentEnrollmentViewModelObj.Load();
+            sharedStudentEnrollmentViewModelObj.Load("@studentID");
         });
     });
     /*$(document).ready(function () {

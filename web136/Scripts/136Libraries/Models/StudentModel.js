@@ -92,6 +92,7 @@
             });
         };
         this.GetStudentGPA = function (id, callback) {
+            alert(id);
             console.log(id);
             alert(id);
             $.ajax({
