@@ -6,17 +6,25 @@
 <h3>Schedule of classes</h3>
 <!--NOT FINISHED, jonathan smith -->
 
-<div id="yearSelect">
-    <select name="yearSelectDropdown" data-bind="foreach:ViewModel" onchange="populateQuarter()">
+<div id="divScheduleYearContent">
+    <select name="yearSelectDropdown" data-bind="foreach: viewModel" onchange="test()">
         <option data-bind="text: year"></option>
     </select>
 </div>
 
+<!--
 <div id="quarterSelect">
-    <select name="quarterSelectDropdown" data-bind="foreach:ViewModel">
-        <option data-bind="text: quarter">1</option>
+    <select name="quarterSelectDropdown" data-bind="foreach: viewModel">
+        <option id="text:quarter" data-bind="text: quarter"></option>
     </select>
 </div>
+    -->
+
+<script type="text/javascript">
+    test() {
+        alert("ping!");
+    }
+</script>
 
 <script type="text/javascript">
     $(document).ready(function () {
@@ -27,8 +35,9 @@
     });
 </script>
 
+<!--
 <script type="text/javascript">
-    $(document).ready(function () {
+    $(document).ready(function populateQuarter() {
         require(['ViewModels/ScheduleQuarterViewModel'], function (scheduleQuarterViewModel) {
             var scheduleQuarterViewModelObj = new scheduleQuarterViewModel();
             scheduleQuarterViewModelObj.Load();
@@ -36,12 +45,6 @@
     });
 </script>
 
-<script>
-    function populateQuarter()
-    {
-        
-    }
-</script>
 
 136 TODO: Show a list of course schedule & filtered by year & quarter
 
@@ -53,3 +56,4 @@
         });
     });
 </script>
+-->

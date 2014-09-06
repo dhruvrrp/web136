@@ -10,6 +10,7 @@
         var that = this;
 
         this.Load = function (callback) {
+            
             $.ajax({
                 url: "http://localhost:5419/Api/Schedule/GetScheduleYear",
                 data: "",
@@ -18,6 +19,7 @@
                     callback(scheduleYearData);
                 },
                 error: function () {
+
                     alert('Error while loading schedule year.  Is your service layer running?');
                 }
             });
