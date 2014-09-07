@@ -1,8 +1,8 @@
 ﻿// ScheduleListViewModel depends on the Models/ScheduleListModel to process requests (Load)
 define(['Models/ScheduleListModel'], function (scheduleListModel) {
-    function ScheduleListViewModel() {
+    function ScheduleListViewModel(year,quarter) {
         this.Load = function () {
-            var scheduleListModelObj = new scheduleListModel();
+            var scheduleListModelObj = new scheduleListModel(year,quarter);
 
             // Because the Load() is a async call (asynchronous), we'll need to use
             // the callback approach to handle the data after data is loaded.
@@ -14,7 +14,11 @@ define(['Models/ScheduleListModel'], function (scheduleListModel) {
 
                 // DTO from the JSON model to the view model. In this case, scheduleListViewModel doesn't need the "id" attribute
                 for (var i = 0; i < scheduleListData.length; i++) {
+                    
                     scheduleListViewModel[i] = {
+                        //info: (scheduleListData[i]).ToString(),
+                        title: (scheduleListData[i]).Course.Title,
+                        description: (scheduleListData[i]).Course.Description
                          //136 TODO fill in what scheduleList should display
                     };
                 }

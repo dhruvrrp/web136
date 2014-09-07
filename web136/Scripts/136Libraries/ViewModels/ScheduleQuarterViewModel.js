@@ -15,7 +15,7 @@ define(['Models/ScheduleQuarterModel'], function (scheduleQuarterModel) {
                 // DTO from the JSON model to the view model. In this case, scheduleQuarterViewModel doesn't need the "id" attribute
                 for (var i = 0; i < scheduleQuarterData.length; i++) {
                     scheduleQuarterViewModel[i] = {
-                        quarter: scheduleQuarterData[i].Quarter,
+                        quarter: scheduleQuarterData[i],
                     };
                 }
 

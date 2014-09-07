@@ -15,10 +15,6 @@ define(['Models/ScheduleYearModel'], function (scheduleYearModel) {
                 // DTO from the JSON model to the view model. In this case, scheduleYearViewModel doesn't need the "id" attribute
                 for (var i = 0; i < scheduleYearData.length; i++) {
 
-                    //scheduleYearViewModel.push(scheduleYearData[i].Year);
-
-                    alert("schedule year data value: " + scheduleYearData[i])
-
                     scheduleYearViewModel[i] = {
                         year: scheduleYearData[i],
                     };

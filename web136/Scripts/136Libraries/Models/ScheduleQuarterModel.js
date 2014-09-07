@@ -1,6 +1,6 @@
 ﻿define([], function () {
     $.support.cors = true;
-    function ScheduleQuarterModel(year) {
+    function ScheduleQuarterModel() {
 
         // "this" object in Javascript is not the same as C# "this" keyword.
         // In JavaScript, "this" object is the object that is current executing the method
@@ -11,7 +11,7 @@
 
         this.Load = function (callback) {
             $.ajax({
-                url: "http://localhost:5419/Api/Schedule/GetQuarterForYear?year=" + year,
+                url: "http://localhost:5419/Api/Schedule/GetScheduleQuarters",
                 data: "",
                 dataType: "json",
                 success: function (scheduleQuarterData) {
