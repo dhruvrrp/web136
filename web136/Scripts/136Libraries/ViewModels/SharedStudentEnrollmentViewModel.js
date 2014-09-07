@@ -39,8 +39,24 @@
         };
         
         this.AddEnrollment = function (data) {
-            sharedStudentEnrollmentModelObj.AddEnrollment(sID, data.scheduleID);
-        };
+            var enrollment = {
+                StudentId: sID,
+                ScheduleId: data.scheduleID
+            }
+            sharedStudentEnrollmentModelObj.AddEnrollment(enrollment,
+                function (result)
+                {
+                    if (result == "ok")
+                    {
+                        alert("ok");
+                    }
+                    else
+                    {
+                        alert("bad");
+                    }
+                }
+
+        )};
 
         /*
         this.deleteEnrollment(studentID, scheduleID)

@@ -22,9 +22,8 @@
             });
         };
 
-        this.AddEnrollment = function (studentID, scheduleID) {
-            var addData = { studentId: studentID, scheduleId: scheduleID };
-            $.ajax({
+        this.AddEnrollment = function (enrollment, callback) {
+           /* $.ajax({
                 url: "http://localhost:5419/Api/Student/EnrollSchedule",
                 data: addData,
                 async: true,
@@ -35,6 +34,20 @@
                 },
                 error: function () {
                     alert('Error while adding enrollment. Is your service layer running?');
+                }
+            });*/
+
+            $.ajax({
+                async: true,
+                method: "POST",
+                url: "http://localhost:5419/Api/Student/EnrollSchedule",
+                data: enrollment,
+                dataType: "json",
+                success: function () {
+                    alert("succeed");
+                },
+                error: function (ts) {
+                    alert(ts.responseText);
                 }
             });
         };
