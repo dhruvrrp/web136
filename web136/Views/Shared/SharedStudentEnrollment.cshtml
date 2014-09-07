@@ -4,38 +4,39 @@
 }
 <h3>Current Enrollment</h3>
 StudentID: @studentID
-@id
-
+<br /><br />
 <div id="divSharedStudentEnrollment">
     <table>
         <thead>
             <tr>
-                <th></th>
                 <th></th>
                 <th>Class Title</th>
             </tr>
         </thead>
         <tbody data-bind="foreach: viewModel">
             <tr>
-                <td></td>
-                <td></td>
-                <td data-bind="text: title"></td>
+               <td><button>Delete</button></td>
+               <td data-bind="text: title"></td>
             </tr>
         </tbody>
     </table>
+
+    <br />
+    <br />
+    <form id="addButton">
+        Schedule ID:<br />
+        <input type="hidden" name="id" value="@id" />
+        <input type="hidden" name="studentID" value="@studentID" />
+        <input data-bind="value: scheduleID"/>
+        <button data-bind="click: addEnroll">Add Enrollment</button>
+    </form>
 </div>
 
 <script type="text/javascript">
     $(document).ready(function () {
         require(['ViewModels/SharedStudentEnrollmentViewModel'], function (sharedStudentEnrollmentViewModel) {
-            var sharedStudentEnrollmentViewModelObj = new sharedStudentEnrollmentViewModel();
+            var sharedStudentEnrollmentViewModelObj = new sharedStudentEnrollmentViewModel("@studentID");
             sharedStudentEnrollmentViewModelObj.Load("@studentID");
         });
     });
-    /*$(document).ready(function () {
-        require(['ViewModels/CourseListViewModel'], function (courseListViewModel) {
-            var courseListViewModelObj = new courseListViewModel();
-            courseListViewModelObj.Load();
-        });
-    });*/
 </script>
