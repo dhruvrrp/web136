@@ -23,19 +23,6 @@
         };
 
         this.AddEnrollment = function (enrollment, callback) {
-           /* $.ajax({
-                url: "http://localhost:5419/Api/Student/EnrollSchedule",
-                data: addData,
-                async: true,
-                method: "POST",
-                dataType: "json",
-                success: function() {
-                    alert('Successfully enrolled');
-                },
-                error: function () {
-                    alert('Error while adding enrollment. Is your service layer running?');
-                }
-            });*/
 
             $.ajax({
                 async: true,
@@ -44,7 +31,21 @@
                 data: enrollment,
                 dataType: "json",
                 success: function () {
-                    alert("succeed");
+                },
+                error: function (ts) {
+                    alert(ts.responseText);
+                }
+            });
+        };
+
+        this.DropEnrolledSchedule = function (enrollment, callback) {
+            $.ajax({
+                async: true,
+                method: "POST",
+                url: "http://localhost:5419/Api/Student/DropEnrolledSchedule",
+                data: enrollment,
+                dataType: "json",
+                success: function () {
                 },
                 error: function (ts) {
                     alert(ts.responseText);

@@ -1,6 +1,5 @@
 ﻿define(['Models/SharedStudentEnrollmentModel'], function (sharedStudentEnrollmentModel) {
     function SharedStudentEnrollmentViewModel(studentID) {
-
         var sID = studentID;
         var that = this;
         var sharedStudentEnrollmentModelObj = new sharedStudentEnrollmentModel(studentID);
@@ -9,10 +8,7 @@
         this.Load = function (studentID) {
 
             sharedStudentEnrollmentModelObj.Load(studentID, function (enrollmentData) {
-               /*
-               this.del = function(){
-                    that.deleteEnrollment(studentID);
-                };*/
+               
                 var button = {
                     scheduleID: "",
                     addEnroll: function (data) {
@@ -29,15 +25,38 @@
                 for (var i = 0; i < enrollmentData.length; i++) {
                     sharedStudentEnrollmentViewModel[i] = {
                         title: enrollmentData[i].Title,
-                        description: enrollmentData[i].Description
+                        cid: enrollmentData[i].CourseId,
+                        deleteButton: function(data)
+                        {
+                            alert(data.cid);
+
+                            that.DeleteEnrollment(data);
+                        }
                     };
                 }
 
                 ko.applyBindings({ viewModel: sharedStudentEnrollmentViewModel },
-                    document.getElementById("divSharedStudentEnrollment"));
+                    document.getElementById("enrollmentForm"));
             });
         };
         
+        this.DeleteEnrollment = function (data) {
+            var enrollment = {
+                StudentId: sID,
+                ScheduleId: data.cid
+            }
+            sharedStudentEnrollmentModelObj.DropEnrolledSchedule(enrollment,
+                function (result) {
+                    if (result == "ok") {
+                        alert("ok");
+                    }
+                    else {
+                        alert("bad");
+                    }
+                }
+        )
+        };
+
         this.AddEnrollment = function (data) {
             var enrollment = {
                 StudentId: sID,
@@ -55,7 +74,6 @@
                         alert("bad");
                     }
                 }
-
         )};
 
         /*

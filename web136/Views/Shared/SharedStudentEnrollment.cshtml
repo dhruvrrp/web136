@@ -13,9 +13,9 @@ StudentID: @studentID
                 <th>Class Title</th>
             </tr>
         </thead>
-        <tbody data-bind="foreach: viewModel">
+           <tbody data-bind="foreach: viewModel">
             <tr>
-               <td><button>Delete</button></td>
+               <td><form><button data-bind="click: deleteButton">Delete</button></form></td>
                <td data-bind="text: title"></td>
             </tr>
         </tbody>
