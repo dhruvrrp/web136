@@ -319,6 +319,7 @@
     <Content Include="Views\Student\ViewGPA.cshtml" />
     <Content Include="Views\Admin\DeleteStudent.cshtml" />
     <Content Include="Views\Shared\SharedCreateStudent.cshtml" />
+    <Content Include="Views\Staff\CourseHistory.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -2,15 +2,38 @@
     ViewBag.Title = "EditStaff";
     var id = ViewBag.id;
 }
+
 <h2>Edit</h2>
 
 <div id="divStaffEdit">
     <a href="~/Staff/Index?id=@ViewBag.id">Back</a><br /><br />
-    Email : <input type="text" data-bind="value: $data.first" /><br />
+    Email : <input type="text" data-bind="value: $data.first" onchange="updateEmail()"id="emailInput"/><br />
     <br />
-    Password : <input type="password" data-bind="value: $data.last" /><br />
+    Password : <input type="password" data-bind="value: $data.last" onchange="updatePass()" id="passwordInput"/><br />
     <br />
-    <input type="button" value="Update" data-bind="value: 'Update', click: $data.update" style="margin-left:80px" />
+    <input type="button" value="Update" data-bind="value: 'Update', click: $data.update" onclick="editStaff()" style="margin-left:80px" />
     <br /><br />
     <div id="divMessage"></div>
 </div>
+
+<script>
+
+    function updateEmail()
+    {
+        email = ($('#emailInput').val());
+    }
+
+    function updatePass()
+    {
+        password = ($('#passwordInput').val());
+    }
+
+    function editStaff() {
+        var id = 1;
+        
+        require(['ViewModels/StaffViewModel'], function (staffViewModel) {
+            var staffViewModelObj = new staffViewModel(1,email,password);
+            staffViewModelObj.Load();
+        });
+    }
+</script>
