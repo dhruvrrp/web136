@@ -9,7 +9,6 @@
         // Common name to use it "that".
         var that = this;
         this.Load = function (studentID, callback) {
-
             $.ajax({
                 url: "http://localhost:5419/Api/Student/GetEnrollments?studentID=" + studentID,
                 data: "",
@@ -19,6 +18,37 @@
                 },
                 error: function () {
                     alert('Error while loading enrollment list.  Is your service layer running?');
+                }
+            });
+        };
+
+        this.AddEnrollment = function (enrollment, callback) {
+
+            $.ajax({
+                async: true,
+                method: "POST",
+                url: "http://localhost:5419/Api/Student/EnrollSchedule",
+                data: enrollment,
+                dataType: "json",
+                success: function () {
+                },
+                error: function (ts) {
+                    alert(ts.responseText);
+                }
+            });
+        };
+
+        this.DropEnrolledSchedule = function (enrollment, callback) {
+            $.ajax({
+                async: true,
+                method: "POST",
+                url: "http://localhost:5419/Api/Student/DropEnrolledSchedule",
+                data: enrollment,
+                dataType: "json",
+                success: function () {
+                },
+                error: function (ts) {
+                    alert(ts.responseText);
                 }
             });
         };
