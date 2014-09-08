@@ -65,6 +65,7 @@ Select a Quarter:
 
     function populateClassList()
     {
+       // $('#divScheduleListContent').detach();
         require(['ViewModels/ScheduleListViewModel'], function (scheduleListViewModel) {
             var scheduleListViewModelObj = new scheduleListViewModel(year, quarter);
             scheduleListViewModelObj.Load();

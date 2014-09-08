@@ -5,15 +5,37 @@
 <h2>Edit</h2>
 
 <div id="divAdminEdit">
-    First : <input type="text" data-bind="value: $data.first" /><br />
+    First : <input type="text" id="firstName" data-bind="value: $data.first" onchange="updateFirst" /><br />
     <br />
-    Last : <input type="text" data-bind="value: $data.last" /><br />
+    Last : <input type="text" id="lastName" data-bind="value: $data.last" onchange="updateLast" /><br />
     <br />
     <input type="button" data-bind="value: 'Update', click: $data.update" style="margin-left:80px" />
     <br /><br />
     <div id="divMessage"></div>    
 </div>
 
+<script type="text/javascript">
+
+    function updateFirst() {
+        email = ($('#firstName').val());
+    }
+
+    function updateLast() {
+        password = ($('#lastName').val());
+    }
+
+    function editAdmin() {
+        require(['ViewModels/AdminViewModel'], function (adminViewModel) {
+            var viewModel = new adminViewModel();
+            viewModel.Load(@id, email, password);
+        });
+    }
+</script>
+
+
+
+
+<!--
 <script type="text/javascript">
     $(document).ready(function () {
         // this require[] will load the /Scripts/136Libraries/ViewModels/AdminViewModel.js file
@@ -25,3 +47,4 @@
     });
 
 </script>
+    -->

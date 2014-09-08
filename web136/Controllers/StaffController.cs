@@ -14,6 +14,11 @@
             return this.View();
         }
 
+        public ActionResult GetStaffInfo()
+        {
+            return this.View();
+        }
+
         public ActionResult GradeStudent(string id)
         {
             ViewBag.id = id;
@@ -46,6 +51,11 @@
         public ActionResult EditStaff(string id)
         {
             ViewBag.id = id;
+            return this.View();
+        }
+
+        public ActionResult CourseHistory()
+        {
             return this.View();
         }
     }
